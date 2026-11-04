@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d090b" />
+    <meta name="description" content="A private dinner invitation for Emanuella." />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>An Invitation for Emanuella</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <span class="glow glow-one"></span>
+      <span class="glow glow-two"></span>
+      <div id="sparkField"></div>
+    </div>
+
+    <section class="opening" id="opening" aria-label="Open your invitation">
+      <div class="terminal" aria-hidden="true">
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-label">invitation.js</span>
+      </div>
+      <div class="opening-inner">
+        <p class="code-line" data-delay="100">&gt; compiling one dinner invitation...</p>
+        <p class="code-line" data-delay="520">&gt; checking guest list...</p>
+        <p class="code-line accent-line" data-delay="940">&gt; <span id="terminalName">Emanuella</span> found. <span>♥</span></p>
+
+        <button class="seal-button" id="openButton" type="button" aria-label="Open the invitation">
+          <span class="seal-mark">E</span>
+          <span class="seal-ring"></span>
+        </button>
+        <p class="tap-label">tap to open</p>
+      </div>
+    </section>
+
+    <main class="page" id="page" aria-hidden="true">
+      <header class="masthead reveal">
+        <p class="eyebrow">ALEXANDER PRESENTS</p>
+        <div class="monogram" aria-label="E and A">E <span>×</span> A</div>
+        <p class="edition">ONE NIGHT · ONE TABLE · TWO PEOPLE</p>
+      </header>
+
+      <section class="hero reveal">
+        <p class="for-line">FOR <span id="guestName">EMANUELLA</span></p>
+        <h1>Dinner,<br /><em>but make it ours.</em></h1>
+        <p class="lede">
+          You asked for an invitation.<br />
+          I thought you deserved an experience.
+        </p>
+        <div class="scroll-cue" aria-hidden="true">
+          <span></span>
+          <small>the details</small>
+        </div>
+      </section>
+
+      <section class="invitation-card reveal" aria-labelledby="inviteTitle">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+
+        <p class="card-kicker">A FORMAL REQUEST</p>
+        <h2 id="inviteTitle">The pleasure of your company is requested</h2>
+        <p class="card-copy">
+          for one very intentional dinner with
+          <strong id="hostName">Alexander</strong>.
+        </p>
+
+        <div class="rule"><span>✦</span></div>
+
+        <dl class="details">
+          <div class="detail">
+            <dt>Date</dt>
+            <dd id="dateValue">Your choice</dd>
+          </div>
+          <div class="detail">
+            <dt>Time</dt>
+            <dd id="timeValue">After sunset</dd>
+          </div>
+          <div class="detail detail-wide">
+            <dt>Place</dt>
+            <dd id="placeValue">A table for two</dd>
+          </div>
+          <div class="detail detail-wide">
+            <dt>Dress code</dt>
+            <dd id="dressValue">Come exactly as you are</dd>
+          </div>
+        </dl>
+
+        <blockquote id="noteValue">
+          “Good food, better conversation, and a night made just for us.”
+        </blockquote>
+      </section>
+
+      <section class="promise reveal">
+        <p class="section-number">01</p>
+        <div>
+          <p class="section-label">THE PROMISE</p>
+          <h2>No agenda.<br />No rush.<br /><em>Just us.</em></h2>
+        </div>
+        <p class="promise-copy">
+          I’ll handle the plan. You bring that smile. Dessert is, of course,
+          non-negotiable.
+        </p>
+      </section>
+
+      <section class="response reveal" id="responseSection">
+        <p class="card-kicker">ONE FINAL QUESTION</p>
+        <h2>So, <span id="responseName">Emanuella</span>—<br /><em>shall we?</em></h2>
+
+        <div class="response-actions">
+          <button class="primary-button" id="acceptButton" type="button">
+            Yes, it’s a date
+            <span aria-hidden="true">→</span>
+          </button>
+          <button class="text-button" id="clueButton" type="button">I need one more reason</button>
+        </div>
+
+        <p class="clue" id="clue" role="status">
+          Because ordinary texts disappear. I wanted this one to feel like a memory.
+        </p>
+      </section>
+
+      <footer class="footer reveal">
+        <p>CODED WITH AN UNREASONABLE AMOUNT OF ATTENTION</p>
+        <span>FOR <span id="footerGuest">EMANUELLA</span> · FROM <span id="footerHost">ALEXANDER</span></span>
+      </footer>
+    </main>
+
+    <div class="success" id="success" role="dialog" aria-modal="true" aria-labelledby="successTitle" aria-hidden="true">
+      <div class="success-inner">
+        <p class="success-code">response: accepted ✓</p>
+        <div class="success-heart" aria-hidden="true">♥</div>
+        <h2 id="successTitle">Perfect.</h2>
+        <p>I knew you had excellent taste.</p>
+        <p class="success-note">It’s officially a date, Emanuella.</p>
+        <button class="primary-button share-response" id="shareResponse" type="button">Tell Alexander</button>
+        <button class="text-button close-success" id="closeSuccess" type="button">Back to the invitation</button>
+      </div>
+    </div>
+
+    <aside class="editor" id="editor" aria-label="Invitation setup" aria-hidden="true">
+      <div class="editor-header">
+        <div>
+          <p>HOST SETUP</p>
+          <h2>Make it yours</h2>
+        </div>
+        <button id="closeEditor" type="button" aria-label="Close setup">×</button>
+      </div>
+      <p class="editor-copy">Fill in the details, then copy the guest link. Nothing here changes the original site.</p>
+      <form id="editorForm">
+        <label>Guest name<input name="to" value="Emanuella" autocomplete="off" /></label>
+        <label>Your name<input name="from" value="Alexander" autocomplete="off" /></label>
+        <label>Date<input name="date" placeholder="Friday, November 13" autocomplete="off" /></label>
+        <label>Time<input name="time" placeholder="7:30 PM" autocomplete="off" /></label>
+        <label>Place<input name="place" placeholder="Restaurant or surprise location" autocomplete="off" /></label>
+        <label>Dress code<input name="dress" placeholder="Come exactly as you are" autocomplete="off" /></label>
+        <label>Personal note<textarea name="note" rows="3" placeholder="Good food, better conversation..."></textarea></label>
+        <button class="primary-button" type="submit">Create guest link</button>
+      </form>
+      <div class="generated-link" id="generatedLink" hidden>
+        <label>Ready to send<input id="shareLink" readonly /></label>
+        <div class="editor-actions">
+          <button id="copyLink" class="copy-button" type="button">Copy link</button>
+          <a id="previewLink" target="_blank" rel="noopener">Open guest view</a>
+        </div>
+      </div>
+    </aside>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
