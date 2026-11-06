@@ -40,13 +40,13 @@
       <header class="masthead reveal">
         <p class="eyebrow">ALEXANDER MADE YOU THIS</p>
         <div class="monogram" aria-label="D and A"><span id="headerInitial">D</span> <span>×</span> A</div>
-        <p class="edition">ONE TABLE · TWO PEOPLE · GOOD PASTA</p>
+        <p class="edition" id="editionText">ONE TABLE · TWO PEOPLE · GOOD PASTA</p>
       </header>
 
       <section class="hero reveal">
         <p class="for-line">FOR <span id="guestName">DYLAN</span></p>
-        <h1>Let me take you<br /><em>to dinner.</em></h1>
-        <p class="lede">
+        <h1 id="heroTitle">Let me take you<br /><em>to dinner.</em></h1>
+        <p class="lede" id="heroLede">
           I wanted to ask you properly.<br />
           So I made the invitation.
         </p>
@@ -62,9 +62,9 @@
         <div class="corner corner-bl"></div>
         <div class="corner corner-br"></div>
 
-        <p class="card-kicker">THE PLAN</p>
+        <p class="card-kicker" id="planKicker">THE PLAN</p>
         <h2 id="inviteTitle">Dinner with me?</h2>
-        <p class="card-copy">
+        <p class="card-copy" id="cardCopy">
           I want to take you to Il Porcellino.<br />
           Just you and <strong id="hostName">Alexander</strong>.
         </p>
@@ -98,17 +98,17 @@
       <section class="promise reveal">
         <p class="section-number">01</p>
         <div>
-          <p class="section-label">MY PART</p>
-          <h2>I’ll make the reservation.<br />You just show up.<br /><em>And yes, dessert.</em></h2>
+          <p class="section-label" id="promiseLabel">MY PART</p>
+          <h2 id="promiseTitle">I’ll make the reservation.<br />You just show up.<br /><em>And yes, dessert.</em></h2>
         </div>
-        <p class="promise-copy">
+        <p class="promise-copy" id="promiseCopy">
           That’s it. No big speech. I just want a good night with you.
         </p>
       </section>
 
       <section class="response reveal" id="responseSection">
-        <p class="card-kicker">BE HONEST</p>
-        <h2>So… <span id="responseName">Dylan</span>,<br /><em>is that a yes?</em></h2>
+        <p class="card-kicker" id="responseKicker">BE HONEST</p>
+        <h2 id="responseTitle">So… <span id="responseName">Dylan</span>,<br /><em>is that a yes?</em></h2>
 
         <div class="response-actions">
           <button class="primary-button" id="acceptButton" type="button">
@@ -134,7 +134,7 @@
         <p class="success-code">response: accepted ✓</p>
         <div class="success-heart" aria-hidden="true">♥</div>
         <h2 id="successTitle">Okay, perfect.</h2>
-        <p>November 11. I’ll handle the rest.</p>
+        <p id="successPlan">November 11. I’ll handle the rest.</p>
         <p class="success-note">It’s officially a date, Dylan.</p>
         <button class="primary-button share-response" id="shareResponse" type="button">Text Alexander</button>
         <button class="text-button close-success" id="closeSuccess" type="button">Back to the invitation</button>
@@ -169,6 +169,6 @@
       </div>
     </aside>
 
-    <script src="./script.js?v=reusable-invitation-1"></script>
+    <script src="./script.js?v=distance-mode-1"></script>
   </body>
 </html>
