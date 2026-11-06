@@ -23,7 +23,7 @@ const defaults = {
   time: "7:00 PM",
   place: "Il Porcellino",
   dress: "Come exactly as you are",
-  note: "Good food, better conversation, and a night made just for us."
+  note: "Good pasta, good conversation, and hopefully a night we’ll want to do again."
 };
 
 const params = new URLSearchParams(window.location.search);
@@ -45,7 +45,7 @@ function applyDetails(values) {
   $("#dressValue").textContent = values.dress;
   $("#noteValue").textContent = `“${escapeQuotes(values.note)}”`;
   $("#responseName").textContent = values.to;
-  $(".success-note").textContent = `It’s officially a date, ${values.to}.`;
+  $(".success-note").textContent = `See you then, ${values.to}.`;
   $("#footerGuest").textContent = values.to.toUpperCase();
   $("#footerHost").textContent = values.from.toUpperCase();
   document.title = `An Invitation for ${values.to}`;
@@ -102,7 +102,7 @@ openButton.addEventListener("click", openInvitation);
 
 clueButton.addEventListener("click", () => {
   clue.classList.toggle("visible");
-  clueButton.textContent = clue.classList.contains("visible") ? "Okay, that was a good reason" : "I need one more reason";
+  clueButton.textContent = clue.classList.contains("visible") ? "Okay, fair" : "Need more convincing?";
 });
 
 function heartBurst() {
@@ -135,7 +135,7 @@ closeSuccess.addEventListener("click", () => {
 });
 
 shareResponse.addEventListener("click", async () => {
-  const text = `It’s a date, ${details.from} 🤍`;
+  const text = `I’m in 🤍`;
   if (navigator.share) {
     try {
       await navigator.share({ text });
@@ -147,7 +147,7 @@ shareResponse.addEventListener("click", async () => {
 
   try {
     await navigator.clipboard.writeText(text);
-    shareResponse.textContent = "Copied — send it to him";
+    shareResponse.textContent = "Copied — text it to Alexander";
   } catch {
     shareResponse.textContent = text;
   }
