@@ -17,7 +17,7 @@ const copyLink = $("#copyLink");
 const previewLink = $("#previewLink");
 
 const defaults = {
-  to: "Madison",
+  to: "Sarah",
   from: "Alexander",
   date: "November 11, 2026",
   time: "7:00 PM",
