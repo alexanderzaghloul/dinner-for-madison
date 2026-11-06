@@ -56,7 +56,35 @@ function applyDetails(values) {
   document.title = `An Invitation for ${values.to}`;
 }
 
+function applyDistanceMode(values) {
+  $("#editionText").textContent = "CHICAGO · MICHIGAN · WORTH THE WAIT";
+  $("#heroTitle").innerHTML = "Until we’re in<br /><em>the same city.</em>";
+  $("#heroLede").innerHTML = "Chicago and Michigan aren’t exactly next door.<br />But I still wanted to make you something.";
+  $("#planKicker").textContent = "FOR WHEN THE MAP COOPERATES";
+  $("#inviteTitle").textContent = "A date worth waiting for";
+  $("#cardCopy").innerHTML = `No exact day yet—just something I hope we get to make real.<br />You and <strong id="hostName">${values.from}</strong>.`;
+  $("#dateValue").textContent = "When we’re finally in the same city";
+  $("#timeValue").textContent = "Whenever neither of us has to rush";
+  $("#placeValue").textContent = "Chicago, Michigan—or halfway";
+  $("#dressValue").textContent = "Whatever makes you feel like you";
+  $("#noteValue").textContent = "“No pressure. No countdown. Just something sweet waiting for us.”";
+  $("#promiseLabel").textContent = "UNTIL THEN";
+  $("#promiseTitle").innerHTML = "A little patience.<br />A lot of intention.<br /><em>One date waiting for us.</em>";
+  $("#promiseCopy").textContent = "I’ll keep the plan warm. You keep being worth the drive.";
+  $("#responseKicker").textContent = "WHEN THE TIMING WORKS";
+  $("#responseTitle").innerHTML = `So… <span id="responseName">${values.to}</span>,<br /><em>can I take you out?</em>`;
+  acceptButton.innerHTML = 'Yes, when it works <span aria-hidden="true">→</span>';
+  clueButton.textContent = "You’ll have to be patient";
+  clueButton.dataset.closed = "You’ll have to be patient";
+  clueButton.dataset.open = "I can do patient";
+  clue.textContent = "Good things are worth a little distance.";
+  $("#successTitle").textContent = "Then it’s worth the wait.";
+  $("#successPlan").textContent = "No date to force. We’ll make it happen when it feels right.";
+  $(".success-note").textContent = `Whenever it works, ${values.to}. I’ll be ready.`;
+}
+
 applyDetails(details);
+if (params.get("mode") === "distance") applyDistanceMode(details);
 
 document.body.classList.add("locked");
 
@@ -107,7 +135,7 @@ openButton.addEventListener("click", openInvitation);
 
 clueButton.addEventListener("click", () => {
   clue.classList.toggle("visible");
-  clueButton.textContent = clue.classList.contains("visible") ? "Okay, fair" : "Need more convincing?";
+  clueButton.textContent = clue.classList.contains("visible") ? (clueButton.dataset.open || "Okay, fair") : (clueButton.dataset.closed || "Need more convincing?");
 });
 
 function heartBurst() {
