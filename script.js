@@ -17,7 +17,7 @@ const copyLink = $("#copyLink");
 const previewLink = $("#previewLink");
 
 const defaults = {
-  to: "Sarah",
+  to: "Dylan",
   from: "Alexander",
   date: "November 11, 2026",
   time: "7:00 PM",
@@ -36,6 +36,11 @@ function escapeQuotes(value) {
 }
 
 function applyDetails(values) {
+  const guestInitial = values.to.trim().charAt(0).toUpperCase() || "D";
+  $("#sealInitial").textContent = guestInitial;
+  $("#headerInitial").textContent = guestInitial;
+  $(".monogram").setAttribute("aria-label", `${guestInitial} and A`);
+  document.documentElement.style.setProperty("--guest-initial", `"${guestInitial}"`);
   $("#guestName").textContent = values.to;
   $("#terminalName").textContent = values.to;
   $("#hostName").textContent = values.from;
