@@ -399,7 +399,7 @@ a {
 }
 
 .invitation-card::before {
-  content: "E  ·  A";
+  content: "M  ·  A";
   position: absolute;
   top: -1.1rem;
   left: 50%;
