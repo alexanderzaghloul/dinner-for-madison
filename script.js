@@ -17,11 +17,11 @@ const copyLink = $("#copyLink");
 const previewLink = $("#previewLink");
 
 const defaults = {
-  to: "Emanuella",
+  to: "Madison",
   from: "Alexander",
-  date: "Your choice",
-  time: "After sunset",
-  place: "A table for two",
+  date: "November 11, 2026",
+  time: "7:00 PM",
+  place: "Il Porcellino",
   dress: "Come exactly as you are",
   note: "Good food, better conversation, and a night made just for us."
 };
